@@ -9,8 +9,9 @@ Python 2.7* and Python 3.*
 
 Ansible 2.3.1 and later
 
-Thycotic Secret Server Python package installed in Ansible Server environment.
-Installing the Thycotic Secret Server Python package in Puppet Server
+Thycotic Secret Server Python package installed on Ansible Server environment.
+
+Installing the Thycotic Secret Server Python package on Ansible Server
 
 ``` python
 pip install secret-server-sdk-client
