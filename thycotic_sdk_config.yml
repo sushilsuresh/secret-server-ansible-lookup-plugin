@@ -1,0 +1,24 @@
+---
+#The folder path to the SDK client that contains the 'tss' file
+sdk_client_path : ""
+
+#The secret server url for the SDK to connect to
+secret_server_url : ""
+
+#The rule name associated with the secrets for the application
+sdk_client_rule : ""
+
+#The token key associated with the rule name
+sdk_client_key : ""
+
+#Cache strategy settings of the sdk client. Refer to SDK manual for more information on each strategy
+sdk_cache_strategy : 0
+
+#Cache age of the cache strategy in minutes
+sdk_cache_age : 0
+
+#set to true if configuration needs to be removed before initialization
+config_reset: true
+
+#clear all cached values immediately
+sdk_cache_clear: true
