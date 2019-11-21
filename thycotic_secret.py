@@ -3,7 +3,7 @@ from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
 DOCUMENTATION = """
-      lookup: thycotic_sdk
+        lookup: thycotic_sdk
         author: Paulo Dorado <pdorado@tsiva.com>
         version_added: "1.0"
         short_description: Look up secrets from Thycoptic Secret Server
