@@ -43,6 +43,11 @@ For example,
             name: thycotic
 ```
 
+For the playbook lookup to work, you need to download and install/extract the Thcotic Secret Server SDK/(CLI) 
+The ``sdk_client_path`` variable defined in "thycotic_sdk_config.yml" should
+point to the directory that contains the tycotic sercret server SDK/CLI.
+The path should contain the file ``tss`` and a bunch of .dll files.
+
 ## Authors
 
 Paulo Dorado
