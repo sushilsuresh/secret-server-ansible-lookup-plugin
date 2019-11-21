@@ -8,14 +8,13 @@ DOCUMENTATION = """
         version_added: "1.0"
         short_description: Look up secrets from Thycoptic Secret Server
         description:
-            - This lookup uses the Thycotic SDK python library to lookup secrets in
-        options:
-          _terms:
-            description: path(s) of files to read
-            required: True
+          - This lookup uses the Thycotic SDK python library to lookup
+            secrets from a Thycotic Secret Server
         notes:
-          - if read in variable context, the file can be interpreted as YAML if the content is valid to the parser.
-          - this lookup does not understand 'globing' - use the fileglob lookup instead.
+          - This module expects the the sdk client which includes the files
+            'tss' and relevant *.dll files to be present in the path specifed
+            in variable 'sdk_client_path'. This is in addition to installting
+            the python module - secret-server-sdk-client
 """
 
 from ansible.errors import AnsibleError, AnsibleParserError
@@ -34,8 +33,6 @@ class LookupModule(LookupBase):
     def run(self, terms, variables=None, **kwargs):
         config_dict = variables[kwargs['thycotic_config']]
         result = []
-
-        print(kwargs)
 
         client = SDK_Client()
         client.configure(config_dict['sdk_client_path'],
